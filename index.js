@@ -17,10 +17,13 @@ bot.onText(fueltextCommandRegex, async (message, match) => {
 bot.onText(/\/help/, async (msg) => {
   const chatId = msg.chat.id;
   bot.sendMessage(chatId,
-    'Guide:\n' +
-    '          {fuel consumption per 100km} {km driven} {fuel cost}\n' +
-    '/fuelcost             9.7                 13.5        50.4\n' +
-    '\n'
+    'Guide:\n\n' +
+    '/fuelcost\n' +
+    '{fuel consumption per 100km}\n' +
+    '{km driven}\n' +
+    '{fuel cost}\n\n' +
+    'Example:\n' +
+    '/fuelcost 9.7 13.5 50.4\n'
   )
 });
 
